@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotosuratchi Vizitka Sayti</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f9f5f0; /* Iliq oqish fon */
+            color: #333;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #444; /* Quyuq kulrang */
+        }
+        .navbar a {
+            color: #f1c40f !important; /* Tilla rang */
+        }
+        .hero-section {
+            background: linear-gradient(to right, #f1c40f, #e67e22);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+        .contact-form button {
+            background-color: #f1c40f;
+            border: none;
+            color: white;
+        }
+        /* Animation for scrolling text */
+        .scrolling-text {
+            position: absolute;
+            bottom: 10px;
+            left: 100%;
+            white-space: nowrap;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.8);
+            animation: scroll-left 18s linear infinite;
+        }
+        .scrolling-text {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .scrolling-text p {
+            display: inline-block;
+            padding: 10px 0;
+            font-size: 1.5rem;
+            color: #f1c40f;
+            font-weight: bold;
+            animation: scroll-left 18s linear infinite; /* 10 soniyalik animatsiya */
+        }
+        @keyframes scroll-left {
+            from {
+                transform: translateX(100%); /* Ekranning o'ng tomonidan boshlanadi */
+            }
+            to {
+                transform: translateX(-100%); /* Ekranning chap tomoniga chiqadi */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Fotosuratchi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">Men haqimda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Bog‘lanish</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section">
+    <h1 style="color: #f1c40f;" class="animate-title">Allomova Mehribon</h1>
+    <p class="animate-subtitle">Hayotingizdagi unutilmas lahzalarni suratga olishga yordam beraman.</p>
+    <div class="scrolling-text">Professional fotosurat xizmatlari - Tabrik marosimlari - Oilaviy suratlar - Kreativ foto sessiyalar</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 animate-about-title">Men haqimda</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="avatar.jpg" alt="Avtor" class="animated-image">
+            </div>
+            <p class="text-center animate-about-text">
+                Men hemisda 2-nomerda turaman.Allamova Mehribon Rustamboy qizi Qoraqalpog'iston respublikasi Beruniy tumani Palvash OFY da. Turmush o'rtog'im bilan baxtli saodatli hayot kechirmoqdamiz. Farzantlarim ikkita egizak Zilola va Hilolaning  onasiman.Maktabda kutubhona mudirasi bolib ishlayman.Turmush o'rtog'im hozirda 3 kurs talabasi.Oddiy oilada bahtli hayot kechiryapmiz.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Hero Section Animatsiyalari */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #333, #555);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-title {
+    animation: fadeInDown 1s ease-in-out;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.animate-subtitle {
+    animation: fadeInUp 1.5s ease-in-out;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.scrolling-text {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #f1c40f;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+.scrolling-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+    background: linear-gradient(to left, #555, transparent);
+}
+
+.scrolling-text span {
+    display: inline-block;
+    animation: scrollLeft 8s linear infinite;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.about-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(241, 196, 15, 0.5);
+}
+
+.animate-about-title {
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.animate-about-text {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Animatsiyalar */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Scrolling text uchun dinamik tarkib
+    const scrollingText = document.querySelector('.scrolling-text');
+    scrollingText.innerHTML = `<span>${scrollingText.textContent}</span>`;
+});
+</script>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Portfolio</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4 portfolio-item">
+                <img src="https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg?cs=srgb&dl=pexels-soldiervip-1308881.jpg&fm=jpg" alt="Portfolio Image 1" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-4 portfolio-item">
+                <img src="https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg?cs=srgb&dl=pexels-soldiervip-1308881.jpg&fm=jpg" alt="Portfolio Image 2" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-4 portfolio-item">
+                <img src="https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg?cs=srgb&dl=pexels-soldiervip-1308881.jpg&fm=jpg" alt="Portfolio Image 3" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Enlarged Image -->
+<div id="imageModal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="Enlarged Portfolio" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Animatsiya va hover effektlar */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.portfolio-item:hover {
+    transform: scale(1.05); /* Hoverda kattalashish */
+}
+.portfolio-item img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Rasmni kattalashtirish */
+    filter: brightness(80%); /* Qoraytirish effekti */
+}
+
+/* Modal dizayni */
+.modal-body img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Portfolio rasmlarga dinamik modal effekt qo'shish
+    const portfolioItems = document.querySelectorAll(".portfolio-item img");
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+
+    portfolioItems.forEach(item => {
+        item.addEventListener("click", function () {
+            modalImage.src = this.src; // Modal ichida rasmni o'zgartirish
+            const bootstrapModal = new bootstrap.Modal(modal); // Bootstrap modalni chaqirish
+            bootstrapModal.show();
+        });
+    });
+});
+</script>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 animate-title">Bog‘lanish</h2>
+        <form class="contact-form">
+            <div class="mb-3 animate-input">
+                <label for="name" class="form-label">Ism</label>
+                <input type="text" class="form-control" id="name" placeholder="Ismingizni kiriting">
+            </div>
+            <div class="mb-3 animate-input">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Emailingizni kiriting">
+            </div>
+            <div class="mb-3 animate-input">
+                <label for="message" class="form-label">Xabar</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Xabaringizni yozing"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary animate-button">Yuborish</button>
+        </form>
+    </div>
+</section>
+
+<style>
+/* Animatsiyalar uchun asosiy CSS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Sarlavha animatsiyasi */
+.animate-title {
+    animation: fadeInUp 1s ease-in-out;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Inputlar animatsiyasi */
+.animate-input {
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+/* Tugma animatsiyasi */
+.animate-button {
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+}
+
+.animate-button:hover {
+    animation: buttonPulse 1.5s infinite;
+    background-color: #f1c40f;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Fokus effektlari */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f1c40f;
+    box-shadow: 0 0 8px rgba(241, 196, 15, 0.5);
+    outline: none;
+    transition: all 0.3s ease;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Formga dinamik animatsiyalar qo'shish
+    const inputs = document.querySelectorAll(".contact-form input, .contact-form textarea");
+
+    inputs.forEach(input => {
+        input.addEventListener("focus", () => {
+            input.parentElement.style.animation = "fadeInUp 0.5s ease-in-out";
+        });
+
+        input.addEventListener("blur", () => {
+            input.parentElement.style.animation = ""; // Animatsiyani qayta yoqish
+        });
+    });
+
+    // Tugma hover animatsiya bilan jonlantirish
+    const button = document.querySelector(".animate-button");
+    button.addEventListener("mouseenter", () => {
+        button.classList.add("hovered");
+    });
+    button.addEventListener("mouseleave", () => {
+        button.classList.remove("hovered");
+    });
+});
+</script>
+
+<!-- Footer -->
+<footer class="text-center py-3 bg-dark text-white">
+    <p>&copy; 2024 Fotosuratchi. Barcha huquqlar himoyalangan.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
